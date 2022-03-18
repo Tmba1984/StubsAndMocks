@@ -4,20 +4,20 @@ pipeline{
 	stages{
 		stage('Git-Checkout'){
 			steps{
-				echo "Checking out from Git Repo"			
-				checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '27461667-09e8-423a-8542-7f7b51421633', url: 'https://github.com/Tmba1984/SquareCount.git']]])
+				echo "Checking out from Git Repo StubsAndMocks"			
+				checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '27461667-09e8-423a-8542-7f7b51421633', url: 'https://github.com/Tmba1984/StubsAndMocks.git']]])
 			}
 		
 		}
 		stage('Build'){
 			steps{
-				echo "Building the checking out project"
+				echo "Building the checking out project StubsAndMocks"
 				bat 'mvn clean compile'	
 			}
 		}
 		stage('Test'){
 			steps{
-				echo "Running tests"
+				echo "Running tests StubsAndMocks"
 				bat 'mvn test'
 			}
 			
