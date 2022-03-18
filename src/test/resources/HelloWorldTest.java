@@ -9,7 +9,7 @@ public class HelloWorldTest {
 
 	@Test
 	public void testHelloWorld() {
-		string output = test.helloWorld();
+		String output = test.helloWorld();
 		assertEquals("It doesn't return 'Hello World'", "Alian", output);
 	}
 
