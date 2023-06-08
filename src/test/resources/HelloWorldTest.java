@@ -10,7 +10,7 @@ public class HelloWorldTest {
 	@Test
 	public void testHelloWorld() {
 		String output = test.helloWorld();
-		assertEquals("Hello World Pit", output);
+		assertEquals(1, 2);
 	}
 
 }
